@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {{!-- Esto de title es para que arriba en el tap de chrome me salga el nombre que quiera --}}
+    <title> Weather </title>
+
+    {{!-- Eso es para que arriba en el tab de chrome aparezca el logo que queremos --}}
+    <link rel = "icon" href = "/img/weather.png">
+
+    {{!-- Esto es para ponerle color al texto o insertar una imagen puro estilo de cosas --}} 
+    <link rel = "stylesheet" href = "/css/styles.css"> 
+
+</head>
+
+<body>
+    <div class = "main-content">
+        {{!-- Esto es para insertar el partial "header" en la pagina --}} 
+        {{>header}}
+        <p>Use this site to get your weather</p>
+
+        <form>
+           {{!-- Placeholder es para poner un texto dentro del cuadro de search --}}
+            <input placeholder="Location">
+
+            {{!-- Esto es para hacer un boton de search en la pagina --}}
+            <button>Search</button> 
+        </form>
+
+        {{!-- Les tenemos que dar un id unico a "p" para que en app.js nos coja como valores unicos --}}
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+
+
+    </div>
+
+    {{!-- aca se poner el parrafo de abajo --}} 
+    {{>footer}}
+
+    {{!-- Esto es para que en control diga lo de app.js de la carpeta de js que es para traerse la info de ese archivo  --}} 
+    <script src = "/js/app.js"></script> 
+</body>
+
+</html>

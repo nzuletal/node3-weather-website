@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {{!-- Esto de title es para que arriba en el tap de chrome me salga el nombre que quiera --}}
+    <title> 404 Error </title>
+
+    {{!-- Eso es para que arriba en el tab de chrome aparezca el logo que queremos --}}
+    <link rel="icon" href="/img/weather.png">
+    
+    {{!-- Esto es para ponerle color al texto o insertar una imagen puro estilo de cosas --}} 
+    <link rel = "stylesheet" href = "/css/styles.css"> 
+</head>
+
+<body>
+    <div class="main-content">
+        {{!-- Esto es para insertar el partial "header" en la pagina --}} 
+        {{>header}}
+        <p>{{error_message}}</p>
+        {{!-- aca se poner el parrafo --}} 
+
+
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
