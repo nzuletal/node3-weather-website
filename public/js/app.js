@@ -18,7 +18,7 @@ weather_form.addEventListener("submit", (e) => {
     message_two.textContent = ""
     
     //Fetch es para traernos info de una pagina y poderlo usar en java para ponerlo en nuestra pagina. Entonces como en el source/app.js ya hicimos para que esta pagina tenga toda la info cuando el usuario busque por eso ya da resultados. es taernos la info de /weather en la de index la otra pagina a esta.
-    fetch("http://localhost:3000/weather?address=" + location).then((response)=> { 
+    fetch("/weather?address=" + location).then((response)=> { 
     response.json().then((data) => {
         if (data.error) {
             message_one.textContent = data.error //Aca lo que hago es que ese mensaje previamente definido me de la info de error
